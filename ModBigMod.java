@@ -104,5 +104,14 @@ public class ModBigMod {
     	
     	return pow2Vals.get(power);
     }
+	
+    public static long geoSum(long r, long max)
+    {
+        
+        long top = sub(1, pow(r, max%(bigMod-1)));
+        long bottom = sub(1,r);
+        long result = divide(top,bottom);
+        return result;
+    }
     
 }
